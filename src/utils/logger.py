@@ -18,33 +18,33 @@ class Logger:
         self.__logging_class = type(logging_class).__name__
 
     def info(self,message:str):
-        """Prints the given message as info
+        """Logs the message as [ INFO ]
 
-        :param message: Message to be printed
-        :type message: str
+        Args:
+            message (str): Message to be logged
         """
         print(self.__OKGREEN + self.__BOLD + "[ INFO ]" + self.__ENDC + " " + self.__logging_class + " - " + message)
 
     def warning(self,message:str):
-        """Prints the given message as warning
+        """Logs the message as [ WARNING ]
 
-        :param message: Message to be printed
-        :type message: str
+        Args:
+            message (str): Message to be logged
         """
         print(self.__WARNING + self.__BOLD + "[ WARINING ]" + self.__ENDC + " " + self.__logging_class + " - " + message)
 
     def error(self,message:str):
-        """Prints the given message as error
+        """Logs the message as [ ERROR ]
 
-        :param message: Message to be printed
-        :type message: str
+        Args:
+            message (str): Message to be logged
         """
         print(self.__FAIL + self.__BOLD + "[ ERROR ]" + self.__ENDC + " " + self.__logging_class + " - " + message)
 
     def debug(self,message:str):
-        """Prints the given message as debug
+        """Logs the message as [ DEBUG ]
 
-        :param message: Message to be printed
-        :type message: str
+        Args:
+            message (str): Message to be logged
         """
         print(self.__OKBLUE + self.__BOLD + "[ DEBUG ]" + self.__ENDC + " " + self.__logging_class + " - " + message)
