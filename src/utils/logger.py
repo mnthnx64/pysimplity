@@ -20,31 +20,35 @@ class Logger:
     def info(self,message:str):
         """Logs the message as [ INFO ]
 
-        Args:
-            message (str): Message to be logged
+        Args
+        ----
+        message (str): Message to be logged
         """
         print(self.__OKGREEN + self.__BOLD + "[ INFO ]" + self.__ENDC + " " + self.__logging_class + " - " + message)
 
     def warning(self,message:str):
         """Logs the message as [ WARNING ]
 
-        Args:
-            message (str): Message to be logged
+        Args
+        ----
+        message (str): Message to be logged
         """
         print(self.__WARNING + self.__BOLD + "[ WARINING ]" + self.__ENDC + " " + self.__logging_class + " - " + message)
 
     def error(self,message:str):
         """Logs the message as [ ERROR ]
 
-        Args:
-            message (str): Message to be logged
+        Args
+        ----
+        message (str): Message to be logged
         """
         print(self.__FAIL + self.__BOLD + "[ ERROR ]" + self.__ENDC + " " + self.__logging_class + " - " + message)
 
     def debug(self,message:str):
         """Logs the message as [ DEBUG ]
 
-        Args:
-            message (str): Message to be logged
+        Args
+        ----
+        message (str): Message to be logged
         """
         print(self.__OKBLUE + self.__BOLD + "[ DEBUG ]" + self.__ENDC + " " + self.__logging_class + " - " + message)
