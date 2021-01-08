@@ -51,6 +51,17 @@ class Bootstrapper:
             self.logger.error("Error while connecting to PostgreSQL: " + str(sys.exc_info()[0].__name__))
             self.logger.error(str(traceback.format_exc()))
 
+    def closeConnection(self):
+        """
+        Closes the connection to the database
+        """
+        self.logger.info("Closing DB connection")
+        self.__cursor.close()
+        self.__connection.close()
+        self.__connection = None
+        self.__cursor = None
+        self.logger.warning("DB connection closed")
+
     def __del__(self):
         if(self.__connection):
             self.logger.warning("DB Connecection not closed Manually, closing now....")
